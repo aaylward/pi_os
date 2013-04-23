@@ -13,7 +13,7 @@ lsl r1,#16 /* shift left by 16 places because we want to turn the 16th gpio pin 
 
 loop$: /* go forever */
 
-str r1,[r0,#40] /* turn the pin off */
+str r1,[r0,#40] /* turn the pin off, light on */
 
 mov r2,#0x4F0000 /* wait */
 wait1$:
@@ -21,9 +21,9 @@ wait1$:
   cmp r2,#0
   bne wait1$
 
-str r1,[r0,#28] /* turn the pin on */
+str r1,[r0,#28] /* turn the pin on, light off */
 
-mov r2,#0x2F0000 /* wait */
+mov r2,#0xFF0000 /* wait */
 wait2$:
   sub r2,#1
   cmp r2,#0
