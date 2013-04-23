@@ -15,7 +15,7 @@ loop$: /* go forever */
 
 str r1,[r0,#40] /* turn the pin off */
 
-mov r2,#0x3F0000 /* wait */
+mov r2,#0x4F0000 /* wait */
 wait1$:
   sub r2,#1
   cmp r2,#0
@@ -23,7 +23,7 @@ wait1$:
 
 str r1,[r0,#28] /* turn the pin on */
 
-mov r2,#0x3F0000 /* wait */
+mov r2,#0x2F0000 /* wait */
 wait2$:
   sub r2,#1
   cmp r2,#0
