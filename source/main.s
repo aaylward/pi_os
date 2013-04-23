@@ -15,7 +15,7 @@ loop$: /* go forever */
 
 str r1,[r0,#40] /* turn the pin off, light on */
 
-mov r2,#0x4F0000 /* wait */
+mov r2,#0x4F0000 /* wait for 5177344 cycles */
 wait1$:
   sub r2,#1
   cmp r2,#0
@@ -23,7 +23,7 @@ wait1$:
 
 str r1,[r0,#28] /* turn the pin on, light off */
 
-mov r2,#0xFF0000 /* wait */
+mov r2,#0xFF0000 /* wait for 16711680 cycles */
 wait2$:
   sub r2,#1
   cmp r2,#0
